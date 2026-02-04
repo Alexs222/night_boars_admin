@@ -1,0 +1,63 @@
+# Зависимости
+/node_modules
+/.pnp
+.pnp.js
+
+# Сборка React (Create React App, Vite, Next.js)
+build/
+dist/
+.next/
+out/
+
+# Логи
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Среда выполнения
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Базы данных
+*.db
+
+# ОС-файлы
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Редакторы (VSCode, IntelliJ)
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+
+# Тесты и покрытие
+coverage/
+*.lcov
+.nyc_output
+.eslintcache
+*.tsbuildinfo
+
+# Yarn
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# Lock-файлы (выберите один менеджер)
+# yarn.lock
+# package-lock.json
