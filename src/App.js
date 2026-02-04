@@ -1,16 +1,37 @@
 import React from 'react';
 import { Admin, Resource } from 'react-admin';
-import simpleRestProvider from 'ra-data-simple-rest';
+import dataProvider from './dataProvider';
+import authProvider from './authProvider';
+import i18nProvider from './i18nProvider';
+import { EventList, EventEdit, EventCreate } from './components/events';
+import { NewsList, NewsEdit, NewsCreate } from './components/news';
 import { UserList, UserEdit, UserCreate } from './components/users';
 
-const dataProvider = simpleRestProvider('http://localhost:8000/api');
-
 const App = () => (
-  <Admin dataProvider={dataProvider}>
-    <Resource 
-      name="users" 
-      list={UserList} 
-      edit={UserEdit} 
+  <Admin
+    dataProvider={dataProvider}
+    authProvider={authProvider}
+    i18nProvider={i18nProvider}
+  >
+    <Resource
+      name="events"
+      options={{ label: 'События' }}
+      list={EventList}
+      edit={EventEdit}
+      create={EventCreate}
+    />
+    <Resource
+      name="news"
+      options={{ label: 'Новости' }}
+      list={NewsList}
+      edit={NewsEdit}
+      create={NewsCreate}
+    />
+    <Resource
+      name="users"
+      options={{ label: 'Пользователи' }}
+      list={UserList}
+      edit={UserEdit}
       create={UserCreate}
     />
   </Admin>
